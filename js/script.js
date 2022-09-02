@@ -7,3 +7,27 @@
 
 console.log('js ok');
 
+const initButton = document.getElementById('init-btn').addEventListener("click", function () {
+    console.log('Play premuto');
+    // ciclo for per generare un numero progressivo da 1 a 100
+    for (let index = 1; index <= 100; index++) {
+
+        // leggo #grid dell'html
+        const divGrid = document.getElementById('grid');
+        console.log(divGrid);
+
+        // creo un elemento div 
+        let divCell = document.createElement("div");
+
+        // inserisco nel div creato il valore index
+        divCell.innerHTML = index;
+
+        // do al div creato la classe .cell
+        divCell.className = "cell";
+        console.log(divCell);
+
+        // inserisco nel div grid il div cell
+        divGrid.append(divCell);
+        console.log(divCell);
+    }
+})

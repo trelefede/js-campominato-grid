@@ -22,3 +22,19 @@ img {
 
 
 /*** CONTENT ***/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    width: calc(100% / 10);
+    height: 120px;
+    border: 1px solid black;
+}

@@ -17,7 +17,6 @@ const initButton = document.getElementById('init-btn').addEventListener("click",
 
     // inizializzo contenuto del div Grid 
     divGrid.innerHTML = '';
-    console.log(divGrid);
 
     // ciclo for per generare un numero progressivo da 1 a 100
     for (let index = 1; index <= 100; index++) {
@@ -34,12 +33,14 @@ const initButton = document.getElementById('init-btn').addEventListener("click",
         // ascolto il click sulle celle
         divCell.addEventListener("click", function () {
             console.log('cella premuta' + index);
+
             // coloro la cella in base al numero contenuto
-            if (index % 2 === 0) {
-                divCell.classList.add("bg-light-blue")
-            } else {
-                divCell.classList.add("bg-green")
-            }
+            checkOdEven(index) ? divCell.classList.add("bg-light-blue") : divCell.classList.add("bg-green");
+            // if (index % 2 === 0) {
+            //     divCell.classList.add("bg-light-blue")
+            // } else {
+            //     divCell.classList.add("bg-green")
+            // }
         })
 
         // inserisco nel div grid il div cell
@@ -47,3 +48,6 @@ const initButton = document.getElementById('init-btn').addEventListener("click",
     }
 })
 
+function checkOdEven(number) {
+    return number % 2 //ritorna 0 o 1
+}

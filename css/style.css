@@ -21,10 +21,12 @@ img {
 
 .bg-light-blue {
     background-color: lightblue;
+    color: white;
 }
 
 .bg-green {
     background-color: green;
+    color: white;
 }
 
 /*** CONTENT ***/

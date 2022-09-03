@@ -26,6 +26,16 @@ const initButton = document.getElementById('init-btn').addEventListener("click",
         divCell.className = "cell";
         console.log(divCell);
 
+        divCell.addEventListener("click", function () {
+            console.log('cella premuta' + index);
+
+            if (index % 2 === 0) {
+                divCell.classList.add("bg-light-blue")
+            } else {
+                divCell.classList.add("bg-green")
+            }
+        })
+
         // inserisco nel div grid il div cell
         divGrid.append(divCell);
         console.log(divCell);

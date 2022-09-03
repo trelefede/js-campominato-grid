@@ -19,7 +19,13 @@ img {
 
 /*** UTILITIES ***/
 
+.bg-light-blue {
+    background-color: lightblue;
+}
 
+.bg-green {
+    background-color: green;
+}
 
 /*** CONTENT ***/
 
